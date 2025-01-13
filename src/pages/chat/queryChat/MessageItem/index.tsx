@@ -22,6 +22,7 @@ import MessageMenuContent from "./MessageMenuContent";
 import MessageSuffix from "./MessageSuffix";
 import TextMessageRender from "./TextMessageRender";
 import VoiceMessageRender from "./VoiceMessageRender";
+import CustomMessageRender from "@/pages/chat/queryChat/MessageItem/CustomMessageRender";
 
 export interface IMessageItemProps {
   message: MessageItemType;
@@ -41,6 +42,7 @@ const components: Record<number, FC<IMessageItemProps>> = {
   [MessageType.CardMessage]: CardMessageRenderer,
   [MessageType.FileMessage]: FileMessageRenderer,
   [MessageType.LocationMessage]: LocationMessageRenderer,
+  [MessageType.CustomMessage]: CustomMessageRender,
 };
 
 const MessageItem: FC<IMessageItemProps> = ({
